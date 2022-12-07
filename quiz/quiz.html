@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
+    <title>SNACクイズ</title>
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="icon" href="./img/snac_fb.png">
+
+</head>
+<body class="quizimg">
+
+<div class="quiz-content">
+
+  <div class="finish">
+    <div class="score-wrap">
+      <span class="score">0</span>
+      <span class="ja">点</span>
+      <span class="full">／200点</span>
+    </div>
+    <a href="index.html" class="goback-button">最初からやり直す</a>
+  </div>
+
+  <div id="bgm_quiz">
+    <button id="yes">((♫))</button>
+      <script>
+      /* ///////////////// quiz.BGM /////////////////////////////// */
+      const bgm_quiz = document.getElementById("bgm_quiz");
+      const yesButton = document.getElementById("yes");
+      const audio = new Audio("./se/quiz.mp3");
+      function hideDiv() {
+      div.style.display = "none";
+      }
+      yesButton.addEventListener("click", () => {
+      audio.play();
+      audio.loop = true;
+      hideDiv();
+      });
+      /* ////////////////////////////////////////////////////////// */
+      </script>
+  </div>
+
+    <main class="quiz">
+        <div class="inner-block">
+       
+          <div class="quiz-content">
+       
+            <div class="quiz-question-number"></div>
+            <h2 class="quiz-question"></h2>
+       
+            <ul class="quiz-answer">
+              <li class="name1">
+              <label class="quiz-button button01">
+                <input name="radio" type="radio" value="">
+                <span class="quiz-text01"></span>
+              </label>
+              </li>
+              <li class="name2">
+                <label class="quiz-button button02">
+                  <input name="radio" type="radio" value="">
+                  <span class="quiz-text02"></span>
+                </label>
+              </li>
+              <li class="name3">
+                <label class="quiz-button button03">
+                  <input name="radio" type="radio" value="">
+                  <span class="quiz-text03"></span>
+                </label>
+              </li>
+              <li class="name4">
+                <label class="quiz-button button04">
+                  <input name="radio" type="radio" value="">
+                  <span class="quiz-text04"></span>
+                </label>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+    <script src="./js/jquery-3.6.1.min.js"></script>
+    <script src="./js/common.js"></script>
+  </main>
+      
+</body>
+ </html>

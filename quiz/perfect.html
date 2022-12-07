@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <!--meta name="format-detection" content="telephone=no"-->
+    <!--meta name="viewport" content="width=device-width"-->
+    <title>SNACクイズ</title>
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
+    <link rel="icon" href="./img/snac_fb.png">
+</head>
+<body class="perfect">
+  <div id="div">
+    <button id="yes">YES</button>
+    </div>
+    <script>
+    const div = document.getElementById("div");
+    const yesButton = document.getElementById("yes");
+    const audio = new Audio("./se/perfect.mp3");
+function hideDiv() {
+div.style.display = "none";
+}
+yesButton.addEventListener("click", () => {
+audio.play();
+hideDiv();
+});
+</script>
+    <script src="./js/jquery-3.6.1.min.js"></script>
+    <script src="./js/common.js"></script>
+
+    <div class="quizresult">
+    <p class="result" >
+    <input type="submit" onclick="location.href='index.html'"name="submit9" value="Continue"></p>
+    </div>
+  </main>
+</body>
+ </html>
