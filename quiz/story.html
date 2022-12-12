@@ -10,9 +10,12 @@
 
 </head>
 <body class="story">
+  <audio autoplay>
+    <source src="./se/select1.mp3">
+  </audio>
   <div id="movie">
 
-    <div id="bgm_story">
+    <div class="bgm">
       <button id="yes">((♫))</button>
     </div>
 
@@ -27,7 +30,7 @@
       <br>
       「俺の財宝か? 欲しけりゃくれてやる。
       <br>
-      探せ! この世の全てをそこに置いてきた!」
+      探せ! この世の全てをそこに置いてきた!!」
       <br>
       無職者達は一攫千金を目指し
       <br>
@@ -37,28 +40,30 @@
     </div>
   </div>
 
+  <script>
+    /* ///////////////// story.roll /////////////////////////////*/
+    var rollText = document.querySelector("#movie .roll-text");
+    rollText.style.setProperty("bottom" , (rollText.offsetHeight * -1) + "px" , "");
+  </script>  
+  
+  <script>
+  /* ///////////////// story.BGM /////////////////////////////*/
+  const bgm_index = document.getElementById("bgm_story");
+  const yesButton = document.getElementById("yes");
+  const audio = new Audio("./se/story.mp3");
+  function hideDiv() {
+  div.style.display = "none";
+  }
+  yesButton.addEventListener("click", () => {
+  audio.play();
+  audio.loop = true;
+  hideDiv();
+  });
+  </script>
+
 <p class="story_submit" ><input type="submit" onclick="location.href='quiz.html'"name="submit9" value="START"></p>
 
-<script>
-  /* ///////////////// story.roll /////////////////////////////*/
-  var rollText = document.querySelector("#movie .roll-text");
-  rollText.style.setProperty("bottom" , (rollText.offsetHeight * -1) + "px" , "");
-</script>  
 
-<script>
-/* ///////////////// story.BGM /////////////////////////////*/
-const bgm_index = document.getElementById("bgm_index");
-const yesButton = document.getElementById("yes");
-const audio = new Audio("./se/story.mp3");
-function hideDiv() {
-div.style.display = "none";
-}
-yesButton.addEventListener("click", () => {
-audio.play();
-audio.loop = true;
-hideDiv();
-});
-</script>
 
   <script src="./js/jquery-3.6.1.min.js"></script>
   <script src="./js/common.js"></script>

@@ -9,27 +9,15 @@
     <link rel="icon" href="./img/snac_fb.png">
 </head>
 <body class="perfect">
-  <div id="div">
-    <button id="yes">YES</button>
-    </div>
-    <script>
-    const div = document.getElementById("div");
-    const yesButton = document.getElementById("yes");
-    const audio = new Audio("./se/perfect.mp3");
-function hideDiv() {
-div.style.display = "none";
-}
-yesButton.addEventListener("click", () => {
-audio.play();
-hideDiv();
-});
-</script>
+  <audio autoplay>
+    <source src="./se/perfect.mp3">
+  </audio>
     <script src="./js/jquery-3.6.1.min.js"></script>
     <script src="./js/common.js"></script>
 
     <div class="quizresult">
     <p class="result" >
-    <input type="submit" onclick="location.href='index.html'"name="submit9" value="Continue"></p>
+    <input type="submit" onclick="location.href='staffroll.html'"name="submit9" value="???"></p>
     </div>
   </main>
 </body>

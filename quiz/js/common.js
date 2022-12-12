@@ -40,7 +40,7 @@
         question: "兵庫県の県庁所在地は",
         answer01: "神戸市",
         answer02: "姫路市",
-        answer03: "兵庫",
+        answer03: "兵庫市",
         answer04: "宝塚市",
       },
       {
@@ -297,6 +297,22 @@
    
               }, 1000);
             }
+
+      // ///////// クイズの結果へのリンク ///////// //
+    
+    $('a').click(function() {
+      console.log(score);
+
+      if(score === 200) {
+        location.href='perfect.html';
+      } else if(score < 200 && score >= 100 ) {
+        location.href='nice.html';
+      } else {
+        location.href='bad.html';
+      } 
+      
+    })
+      // ///////// クイズの結果へのリンク ///////// //
             return false;
           });
         },
@@ -340,5 +356,10 @@
     if (quiz[0]) {
       let queInstance = new questionObject(quiz);
     }
-   
+
+
+
   })(jQuery);
+
+
+

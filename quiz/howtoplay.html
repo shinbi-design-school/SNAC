@@ -9,6 +9,9 @@
     <link rel="icon" href="./img/snac_fb.png">
 </head>
 <body class="howtoplay">
+  <audio autoplay>
+    <source src="./se/select1.mp3">
+  </audio>
 
   <!--<div class="howtoplay">-->
     <p class="howto_button" >
@@ -29,11 +32,26 @@
       全問正解目指して頑張れ‼
     </div>
 
-  <div id="bgm">
+  <div class="bgm">
     <button id="yes">((♫))</button>
   </div>
+  <script>
+  /* ///////////////// index.BGM /////////////////////////////*/
+  const bgm_howto = document.getElementById("bgm_howto");
+  var yesButton = document.getElementById("yes");
+  var audio = new Audio("se/howtoplay.mp3");
+  function hideDiv() {
+  div.style.display = "none";
+  }
+  yesButton.addEventListener("click", () => {
+  audio.play();
+  audio.loop = true;
+  hideDiv();
+  });
+  /* ////////////////////////////////////////////////////////// */
+  </script>
 
   <script src="./js/jquery-3.6.1.min.js"></script>
   <script src="./js/common.js"></script>
 </body>
- </html>
+</html>

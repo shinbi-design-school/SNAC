@@ -4,20 +4,18 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 190px 25px;
     margin: 0px  0px 0px 365px;
-    position: fixed;
+    top: 250px;
+    position: relative;
 }
 
 /* ////////// 〇・✕　演出 ///////// */
-.quiz-answer {
-    position: relative;
-  }
   .quiz-answer::before {
     position: absolute;
-    width: 200px;
-    height: 200px;
-    font-size: 200px;
+    width: 500px;
+    height: 500px;
+    font-size: 500px;
     opacity: 0.7;
-    top: -40px;
+    top: -100px;
     left: 0;
     right: 0;
     margin: auto;
@@ -26,6 +24,7 @@
     text-align: center;
     z-index: 2;
     pointer-events: none;
+    padding-right: 150px;
   }
   .quiz-answer.is-correct .checked {
     background: #ffb3b3;
@@ -58,6 +57,7 @@
     font-weight: bold;
     font-size: 3rem;
     color: #5e5427;
+    top: 110px;
     
 }
 .quiz-question-number{
@@ -68,10 +68,11 @@
     font-family: 'DotGothic16', sans-serif;
     font-weight: bold;
     font-size: 2.5rem;
+    top: 100px;
     color: #5e5427;
 }
 body.title {
-    background-image: url(../img/title.png);
+    background-image: url(../img/Let’ｓQ.png);
     background-color:  #b1921b;
     background-repeat:  no-repeat;
     background-position: center;  
@@ -80,7 +81,7 @@ body.title {
     background-attachment: fixed;
     width: 100%;
     height: 80%;
-    
+    overflow: hidden;
 }
 /*howtoplayわかりませんでした。サイズずれます*/
 body.howtoplay {
@@ -92,6 +93,7 @@ body.howtoplay {
     background-attachment: fixed;
     width: 100%;
     height: 80%;
+    overflow: hidden;
 }
 /*storyわかりませんでした。サイズずれます*/
 /*body.story {
@@ -104,6 +106,17 @@ body.howtoplay {
     width: 80%;
     height: 60%;
 }*/
+body.staffroll{
+  background-image: url(../img/black.png);
+  background-color:  #b1921b;
+  background-repeat:  no-repeat;
+  background-position:center center;  
+  object-fit: cover;
+  background-attachment: fixed;
+  width: 100%;
+  height: 80%;
+  overflow: hidden;
+}
 body.story {
 	background-image: url(../img/story3.png);
   background-color:  #b1921b;
@@ -157,15 +170,29 @@ body.story {
   }
 
 .roll-text{
-	width: 95%;
+	width: 93%;
 	text-align: center;
 	white-space : pre;
 	color:white;
 	position:absolute;
-	animation: anim-scroll-up 50s linear forwards;
+	animation: anim-scroll-up 43s linear forwards;
     font-family: 'DotGothic16', sans-serif;
     font-size: 3rem;
   }
+
+  .roll-movie{
+    width: 85%;
+    text-align: center;
+    white-space : pre;
+    color:white;
+    position:absolute;
+    animation: anim-scroll-up 50s linear both;
+      font-family: 'DotGothic16', sans-serif;
+      font-size: 3rem;
+    }
+
+
+  
   @keyframes anim-scroll-up{
 	from{
 	  top:auto;
@@ -174,6 +201,9 @@ body.story {
 	  bottom:100%;
 	}
   }
+
+  
+
 
 
 body.perfect {
@@ -185,6 +215,7 @@ body.perfect {
     background-attachment: fixed;
     width: 100%;
     height: 80%;
+    overflow: hidden;
 }
 
 body.nice {
@@ -196,6 +227,7 @@ body.nice {
     background-attachment: fixed;
     width: 100%;
     height: 80%;
+    overflow: hidden;
 }
 
 body.bad {
@@ -207,6 +239,7 @@ body.bad {
     background-attachment: fixed;
     width: 100%;
     height: 80%;
+    overflow: hidden;
 }
 
 body.quizimg {
@@ -218,29 +251,19 @@ body.quizimg {
     background-attachment: fixed;
     width: 100%;
     height: 80%;
+    overflow:hidden
 }
-.title input[type="submit"]{
-    width: 300px;
-    height: 80px;
-    color: #b1921b;
-    border-right: 4px solid #cea82c;
-    border-bottom: 10px solid #987c1e;
-    border-left: 4px solid #ffed8b;
-    border-radius: 0;
-    border-top: 4px solid #e9d38b;
-    font-size: 200%;
-    font-weight: bold;
-    background: -webkit-gradient(linear, right top, left top, from(#ffd75b), color-stop(30%, #fff5a0), color-stop(40%, #fffabe), color-stop(50%, #ffffdb), color-stop(70%, #fff5a0), to(#fdd456));
-    background: -webkit-linear-gradient(right, #ffd75b 0%, #fff5a0 30%, #fffabe 40%, #ffffdb 50%, #fff5a0 70%, #fdd456 100%);
-    background: linear-gradient(-90deg, #ffd75b 0%, #fff5a0 30%, #fffabe 40%, #ffffdb 50%, #fff5a0 70%, #fdd456 100%);
-    text-shadow: -1px -1px 1px #ffffd9;
-    font-family: 'DotGothic16', sans-serif;
-    letter-spacing : 10px;
+
+/*indexのボタン配置*/
+.index_1{
+    text-align: center;
+    justify-content: space-between;
+    margin-top: 490px;
 }
 
 .title input[type="submit"]{
     width: 300px;
-    height: 80px;
+    height: 70px;
     color: #b1921b;
     border-right: 4px solid #cea82c;
     border-bottom: 10px solid #987c1e;
@@ -255,15 +278,10 @@ body.quizimg {
     text-shadow: -1px -1px 1px #ffffd9;
     font-family: 'DotGothic16', sans-serif;
     letter-spacing : 10px;
+
 }
-/*.submit9:hover {
-    margin-top: 3px;
-    color: #b1921b;
-    border-right: 4px solid #cea82c;
-    border-bottom: 7px solid #987c1e;
-    border-left: 4px solid #ffed8b;
-}
-*/
+
+
 .title input[type="submit"]:hover {
 box-shadow: none;
 transform: translateY(5px);
@@ -272,10 +290,34 @@ text-shadow: 0 0 15px  #fff389,0 0 10px #fff389,0 2px 1px rgb(92, 109, 125);
 box-shadow: 0 0 15px  #ffea2d inset, 0 0 15px #fff389,0 1px 
 }
 
-.title {
-    text-align: center;
-   margin-top: 450px;
+.howto input[type="submit"]{
+  width: 300px;
+  height: 70px;
+  color: #b1921b;
+  border-right: 4px solid #cea82c;
+  border-bottom: 10px solid #987c1e;
+  border-left: 4px solid #ffed8b;
+  border-radius: 0;
+  border-top: 4px solid #e9d38b;
+  font-size: 200%;
+  font-weight: bold;
+  background: -webkit-gradient(linear, right top, left top, from(#ffd75b), color-stop(30%, #fff5a0), color-stop(40%, #fffabe), color-stop(50%, #ffffdb), color-stop(70%, #fff5a0), to(#fdd456));
+  background: -webkit-linear-gradient(right, #ffd75b 0%, #fff5a0 30%, #fffabe 40%, #ffffdb 50%, #fff5a0 70%, #fdd456 100%);
+  background: linear-gradient(-90deg, #ffd75b 0%, #fff5a0 30%, #fffabe 40%, #ffffdb 50%, #fff5a0 70%, #fdd456 100%);
+  text-shadow: -1px -1px 1px #ffffd9;
+  font-family: 'DotGothic16', sans-serif;
+  letter-spacing : 10px;
+  margin-bottom: 10px;
 }
+
+.howto input[type="submit"]:hover {
+box-shadow: none;
+transform: translateY(5px);
+cursor: pointer;
+text-shadow: 0 0 15px  #fff389,0 0 10px #fff389,0 2px 1px rgb(92, 109, 125);
+box-shadow: 0 0 15px  #ffea2d inset, 0 0 15px #fff389,0 1px 
+}
+
 
 /* quiz.html内のcss*/
 input[type=radio]{
@@ -330,12 +372,16 @@ label.quiz-button{
     text-shadow: 0 0 5px #fff, 0 0 5px #fff, 0 0 5px #fff, 0 0 5px #fff, 0 0 5px #fff;
 }
 
-
+/*perfect、nice,badのボタン*/
 div.quizresult {
     width: 100%;
     display: flex;
     justify-content: space-evenly;
-    margin: 50px 0;
+}
+
+.result {
+  text-align: center;
+  margin-top: 550px;
 }
 
 .result input[type="submit"]{
@@ -364,9 +410,43 @@ box-shadow: 0 0 15px  #d8dcdc inset, 0 0 15px white,0 1px
 
 }
 
-.result {
-    text-align: center;
-    margin-top: 500px;
+
+/*スタッフロールボタン*/
+
+div.quizstaff {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.Continue {
+  position:fixed;
+  bottom:20px;
+  left: 40%;
+}
+.Continue input[type="submit"]{
+  width: 300px;
+  height: 80px;
+  color: #000;
+  border-top: 4px solid #d8dcdc;
+  border-right: 4px solid #666;
+  border-bottom: 4px solid #333;
+  border-left: 4px solid #868888;
+  border-radius: 0;
+  background-image: -webkit-linear-gradient(135deg, #333 0%, #868888 20%, #d8dcdc 34%, white 53%, #666 100%);
+  background-image: linear-gradient(-45deg, #333 0%, #868888 20%, #d8dcdc 34%, white 53%, #666 100%);
+  text-shadow: 0 0 5px #fff, 0 0 5px #fff, 0 0 5px #fff, 0 0 5px #fff, 0 0 5px #fff;
+  font-family: 'DotGothic16', sans-serif;
+  font-size: 220%;
+  letter-spacing : 7px;
+  }
+  
+.Continue input[type="submit"]:hover {
+box-shadow: none;
+transform: translateY(5px);
+cursor: pointer;
+text-shadow: 0 0 7px #fff, 0 0 7px #fff, 0 0 7px #fff, 0 0 7px #fff, 0 0 7px #fff, 0 0 7px #fff, 0 0 7px #fff, 0 0 7px #fff;
+box-shadow: 0 0 15px  #d8dcdc inset, 0 0 15px white,0 1px 
+
 }
 
 /* ///最終問題の背景/// */
@@ -402,29 +482,40 @@ box-shadow: 0 0 15px  #d8dcdc inset, 0 0 15px white,0 1px
     font-size: 24px;
   }
   .finish .goback-button {
-    font-size: 14px;
+    font-size: 2rem;
     color: #fff;
     margin-top: 30px;
     display: inline-block;
+    font-family: 'DotGothic16', sans-serif;
   }
 /* //////////////////////// */
 
-/*bgmのボタンの配置*/
-#bgm {
+/*index,howto,story.quizのbgmのボタンの配置*/
+.bgm {
     position:fixed;
     right: 95px;
     bottom:20px;
-
 }
+
+/*リザルト画面のボタン*/
+
+#result_button{
+position: fixed;
+right: 95px;
+bottom: 20px;
+}
+
+
+
 #yes{
-  width: 73px;
-  height: 70px;
-  color: rgb(113, 113, 113);
-  background-color: #b8b8b8;
-  border: none;
-  border-radius: 300px;
-  font-family: 'DotGothic16', sans-serif;
-  font-size: 130%;
+width: 73px;
+height: 70px;
+color: rgb(113, 113, 113);
+background-color: #b8b8b8;
+border: none;
+border-radius: 300px;
+font-family: 'DotGothic16', sans-serif;
+font-size: 130%;
 }
 
 #yes:hover{
@@ -447,6 +538,11 @@ box-shadow: 0 0 15px  #d8dcdc inset, 0 0 15px white,0 1px
   font-size: 130%;
 }
 
+.reverse:hover{
+  color: #fff;
+  background-color: #3e3e3e;
+}
+
 .reverse::before { /* くの字の表示設定 */
 left: 4px;
 box-sizing: border-box;
@@ -455,7 +551,7 @@ height: 4px;
 border: 4px solid transparent;
 border-left: 4px solid #fff;
 }
- 
+
 .reverse::after { /* 棒の表示設定 */
   left: 0;
   width: 6px;

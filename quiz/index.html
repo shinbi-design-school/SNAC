@@ -7,31 +7,33 @@
     <link rel="stylesheet" type="text/css" href="./css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
     <link rel="icon" href="./img/snac_fb.png">
+    <script src="https://unpkg.com/three@0.140.2/build/three.min.js"></script>
 
 </head>
 <body class="title">
 
-
-
+<div class="index_1">
     <p class="title" ><input type="submit" onclick="location.href='story.html'"name="submit9" value="START"></p>
-    <p class="howto" ><input type="submit" onclick="location.href='howtoplay.html'"name="submit9" value="howtoplay"></p>
-
-    <div id="bgm_index">
+    <p class="howto" ><input type="submit" onclick="location.href='howtoplay.html'"name="submit9" value="How to play"></p>
+</div>
+    <div class="bgm">
       <button id="yes">((♫))</button>
     </div>
-    <script>
-      const bgm_index = document.getElementById("bgm_index");
-      const yesButton = document.getElementById("yes");
-      const audio = new Audio("./se/index.mp3");
-      function hideDiv() {
-      div.style.display = "none";
-      }
-      yesButton.addEventListener("click", () => {
-      audio.play();
-      audio.loop = true;
-      hideDiv();
-      });
-    </script>
+<script>
+    /* ///////////////// index.BGM /////////////////////////////*/
+const bgm_index = document.getElementById("bgm_index");
+var yesButton = document.getElementById("yes");
+var audio = new Audio("./se/index.mp3");
+function hideDiv() {
+div.style.display = "none";
+}
+yesButton.addEventListener("click", () => {
+audio.play();
+audio.loop = true;
+hideDiv();
+});
+/* ////////////////////////////////////////////////////////// */
+</script>
 
     <script src="./js/jquery-3.6.1.min.js"></script>
     <script src="./js/common.js"></script>
