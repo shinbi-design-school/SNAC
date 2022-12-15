@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <!--meta name="format-detection" content="telephone=no"-->
+    <!--meta name="viewport" content="width=device-width"-->
+    <title>SNACクイズ</title>
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
+    <link rel="icon" href="./img/snac_fb.png">
+
+</head>
+<body class="story">
+  <audio autoplay>
+    <source src="./se/select1.mp3">
+  </audio>
+  <audio autoplay>
+    <source src="./se/story.mp3">
+  </audio>
+  <div id="movie">
+
+   <!-- <div class="bgm">
+      <button id="yes">((♫))</button>
+    </div>-->
+
+    <div class="roll-text">
+      富・名声・力、この世のすべてを手に入れた男、
+      <br>
+      冒険王・ゴールドニート。
+      <br>
+      彼の死に際に放った一言は
+      <br>
+      人々を冒険に駆り立てた。
+      <br>
+      「俺の財宝か? 欲しけりゃくれてやる。
+      <br>
+      探せ! この世の全てをそこに置いてきた!!」
+      <br>
+      無職者達は一攫千金を目指し
+      <br>
+      夢を追いつづける。
+      <br>
+      世はまさに大冒険時代!
+    </div>
+  </div>
+  <p class="howto_button" >
+    <input class="reverse" type="submit" onclick="location.href='title.html'"name="submit9" value="戻る"></p>
+ <script>
+    /* ///////////////// story.roll /////////////////////////////*/
+    var rollText = document.querySelector("#movie .roll-text");
+    rollText.style.setProperty("bottom" , (rollText.offsetHeight * -1) + "px" , "");
+  </script>  
+  
+ <!--  <script>
+  /* ///////////////// story.BGM /////////////////////////////*/
+  const bgm_index = document.getElementById("bgm_story");
+  const yesButton = document.getElementById("yes");
+  const audio = new Audio("./se/story.mp3");
+  function hideDiv() {
+  div.style.display = "none";
+  }
+  yesButton.addEventListener("click", () => {
+  audio.play();
+  audio.loop = true;
+  hideDiv();
+  });
+  </script>-->
+
+<p class="story_submit" ><input type="submit" onclick="location.href='quiz.html'"name="submit9" value="START"></p>
+
+
+
+  <script src="./js/jquery-3.6.1.min.js"></script>
+  <script src="./js/common.js"></script>
+      
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <!--meta name="format-detection" content="telephone=no"-->
+    <!--meta name="viewport" content="width=device-width"-->
+    <title>SNACクイズ</title>
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
+    <link rel="icon" href="./img/snac_fb.png">
+</head>
+<body class="howtoplay">
+  <audio autoplay>
+    <source src="./se/select1.mp3">
+  </audio>
+  <audio autoplay>
+    <source src="./se/howtoplay.mp3">
+  </audio>
+
+  <!--<div class="howtoplay">-->
+    <p class="howto_button" >
+    <input class="reverse" type="submit" onclick="location.href='title.html'"name="submit9" value="戻る"></p>
+  </div>
+  <h1>How to Play</h1>
+    <div class="howto-text">
+      これは全20問の4択クイズだよ。
+      <br>
+      STARボタンを押してゲーム開始‼
+      <br>
+      答えだと思うボタンをクリックしてね。
+      <br>
+      もう一度チャレンジしたい時はContinueボタンをクリックしてね。
+      <br>
+      全問正解目指して頑張れ‼
+    </div>
+
+  <!--<div class="bgm">
+    <button id="yes">((♫))</button>
+  </div>
+  <script>
+  /* ///////////////// index.BGM /////////////////////////////*/
+  const bgm_howto = document.getElementById("bgm_howto");
+  var yesButton = document.getElementById("yes");
+  var audio = new Audio("se/howtoplay.mp3");
+  function hideDiv() {
+  div.style.display = "none";
+  }
+  yesButton.addEventListener("click", () => {
+  audio.play();
+  audio.loop = true;
+  hideDiv();
+  });
+  /* ////////////////////////////////////////////////////////// */
+  </script>-->
+
+  <script src="./js/jquery-3.6.1.min.js"></script>
+  <script src="./js/common.js"></script>
+</body>
+</html>

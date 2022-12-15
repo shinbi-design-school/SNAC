@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
+    <title>SNACクイズ</title>
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="icon" href="./img/snac_fb.png">
+
+</head>
+<body class="quizimg">
+  <audio autoplay>
+    <source src="./se/select1.mp3">
+  </audio>
+  <audio autoplay>
+    <source src="./se/quiz.mp3">
+  </audio>
+<div class="quiz-content">
+
+  <div class="finish">
+    <div class="score-wrap">
+      <span class="score">0</span>
+      <span class="ja">点</span>
+      <span class="full">／200点</span>
+    </div>
+    <a href="#" class="goback-button">冒険の結果は？</a>
+  </div>
+  <!--正答の音-->
+<audio id="btn_audionice">
+  <source src="./se/se_nice.mp3">
+</audio>
+<audio id="btn_audiobad">
+  <source src="./se/se_bad.mp3">
+</audio>
+
+    <main class="quiz">
+        <div class="inner-block">
+          <div class="quiz-content">
+            <div class="quiz-question-number"></div>
+            <h2 class="quiz-question"></h2>
+            <ul class="quiz-answer">
+              <li class="name1">
+                <!--onclickで音が鳴るように指定-->
+              <label class="quiz-button button01" onclick="audio_nice()"> 
+                <input name="radio" type="radio" value="" >
+                <span class="quiz-text01"></span>
+              </label>
+              </li>
+              <li class="name2">
+                <label class="quiz-button button02" onclick="audio_bad()">
+                  <input name="radio" type="radio" value="">
+                  <span class="quiz-text02"></span>
+                </label>
+              </li>
+              <li class="name3">
+                <label class="quiz-button button03" onclick="audio_bad()">
+                  <input name="radio" type="radio" value="">
+                  <span class="quiz-text03"></span>
+                </label>
+              </li>
+              <li class="name4">
+                <label class="quiz-button button04" onclick="audio_bad()">
+                  <input name="radio" type="radio" value="">
+                  <span class="quiz-text04"></span>
+                </label>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+
+        <script>
+        function audio_nice() {
+          document.getElementById('btn_audionice').currentTime = 0; //連続クリックに対応
+          document.getElementById('btn_audionice').play(); //クリックしたら音を再生
+      }
+
+        function audio_bad(){
+          document.getElementById('btn_audiobad').currentTime = 0;
+          document.getElementById('btn_audiobad').play();
+        }
+      </script>
+
+
+    <script src="./js/jquery-3.6.1.min.js"></script>
+    <script src="./js/common.js"></script>
+  </main>
+      
+</body>
+</html>
