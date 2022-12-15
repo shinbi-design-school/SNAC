@@ -13,11 +13,14 @@
   <audio autoplay>
     <source src="./se/select1.mp3">
   </audio>
+  <audio autoplay>
+    <source src="./se/story.mp3">
+  </audio>
   <div id="movie">
 
-    <div class="bgm">
+   <!-- <div class="bgm">
       <button id="yes">((♫))</button>
-    </div>
+    </div>-->
 
     <div class="roll-text">
       富・名声・力、この世のすべてを手に入れた男、
@@ -39,14 +42,15 @@
       世はまさに大冒険時代!
     </div>
   </div>
-
-  <script>
+  <p class="howto_button" >
+    <input class="reverse" type="submit" onclick="location.href='title.html'"name="submit9" value="戻る"></p>
+ <script>
     /* ///////////////// story.roll /////////////////////////////*/
     var rollText = document.querySelector("#movie .roll-text");
     rollText.style.setProperty("bottom" , (rollText.offsetHeight * -1) + "px" , "");
   </script>  
   
-  <script>
+ <!--  <script>
   /* ///////////////// story.BGM /////////////////////////////*/
   const bgm_index = document.getElementById("bgm_story");
   const yesButton = document.getElementById("yes");
@@ -59,7 +63,7 @@
   audio.loop = true;
   hideDiv();
   });
-  </script>
+  </script>-->
 
 <p class="story_submit" ><input type="submit" onclick="location.href='quiz.html'"name="submit9" value="START"></p>
 
